@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-export const ENV = 'http://localhost:3333/api';
+import { environment } from '@env/environment';
 
 export interface PeriodicElement {
   name: string;
@@ -19,11 +18,11 @@ export class HelpPageService {
 
 
   createElement(element) {
-    return this._http.post<PeriodicElement[]>(`${ENV}/elements`, element);
+    return this._http.post<PeriodicElement[]>(`${environment.baseUrl}/elements`, element);
   }
 
   getElements() {
-    return this._http.get<PeriodicElement[]>(`${ENV}/elements`);
+    return this._http.get<PeriodicElement[]>(`${environment.baseUrl}/elements`);
   }
 
 }

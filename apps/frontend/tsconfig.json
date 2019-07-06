@@ -3,10 +3,10 @@
   "compilerOptions": {
     "types": ["node", "jest"],
     "paths": {
-      "@app/*" :["app/*"],
-      "@app/core/*" :["app/core/*"],
-      "@app/shared/*" :["app/shared/*"],
-      "@env/*" :["environments/*"],
+      "@app/*" :["./apps/frontend/src/app/*"],
+      "@app/core/*" :["./apps/frontend/src/app/core/*"],
+      "@app/shared/*" :["./apps/frontend/src/app/shared/*"],
+      "@env/*" :["./apps/frontend/src/environments/*"],
 
     }
   },
