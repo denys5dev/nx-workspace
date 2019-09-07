@@ -30,6 +30,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 	templateUrl: './help-page.component.html',
 	styleUrls: ['./help-page.component.scss']
 })
+
 export class HelpPageComponent implements OnInit {
 	form: FormGroup;
 	dataSource: PeriodicElement[] = [];
@@ -37,9 +38,9 @@ export class HelpPageComponent implements OnInit {
 	matcher = new MyErrorStateMatcher();
 	constructor(
 		private _fb: FormBuilder,
-		private _helpService: HelpPageService
+		private _helpService: HelpPageService,
 	) {}
-
+	
 	ngOnInit() {
 		this._helpService.getElements().subscribe(res => {
 			this.dataSource = res;
